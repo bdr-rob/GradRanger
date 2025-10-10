@@ -1,0 +1,48 @@
+/* Grade Ranger Theme Variables */
+@layer base {
+  :root {
+    /* Grade Ranger Brand Colors */
+    --grade-ranger-primary: 71 104 45; /* #47682d in RGB */
+    --grade-ranger-secondary: 20 49 79; /* #14314F in RGB */
+    --grade-ranger-silver: 171 210 190; /* #ABD2BE in RGB */
+    
+    /* Dynamic theme colors (admin configurable) */
+    --theme-primary: var(--grade-ranger-primary);
+    --theme-secondary: var(--grade-ranger-secondary);
+    --theme-accent: var(--grade-ranger-silver);
+    
+    /* Override shadcn defaults with Grade Ranger colors */
+    --primary: 71 104 45;
+    --primary-foreground: 255 255 255;
+    --secondary: 20 49 79;
+    --secondary-foreground: 171 210 190;
+    --accent: 171 210 190;
+    --accent-foreground: 20 49 79;
+  }
+
+  .dark {
+    /* Dark mode adjustments for Grade Ranger */
+    --primary: 106 141 79; /* Lighter green for dark mode */
+    --primary-foreground: 20 49 79;
+    --secondary: 42 80 120; /* Lighter blue for dark mode */
+    --secondary-foreground: 171 210 190;
+  }
+}
+
+/* Grade Ranger specific utility classes */
+@layer utilities {
+  .bg-gradient-grade-ranger {
+    background: linear-gradient(135deg, #47682d 0%, #14314F 100%);
+  }
+  
+  .text-gradient-grade-ranger {
+    background: linear-gradient(135deg, #47682d 0%, #ABD2BE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-gradient-grade-ranger {
+    border-image: linear-gradient(135deg, #47682d 0%, #14314F 100%) 1;
+  }
+}
